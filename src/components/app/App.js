@@ -1,17 +1,18 @@
 import AppInfo from '../app-info/app-info';
 import SearchPanel from '../search-panel/search-panel';
 import AppFilter from '../app-filter/app-filter';
-import EmployeesList from '../employees-list/employees-list';
-import EmployeesAddForm from '../employees-add-form/employees-add-form';
+import EmployersList from '../employers-list/employers-list';
+import EmployersAddForm from '../employers-add-form/employers-add-form';
 
 import './App.css';
+import React from "react";
 
 function App() {
 	
 	const data = [
-		{name: 'ffsfsdf', salary: 5604, increase: false},
-		{name: 'ljkljkljkl', salary: 456, increase: true},
-		{name: 'zxczxcz', salary: 799, increase: false},
+		{name: 'ffsfsdf', salary: 5604, increase: false, id: 1},
+		{name: 'ljkljkljkl', salary: 456, increase: true, id: 2},
+		{name: 'zxczxcz', salary: 799, increase: false, id: 3},
 	]
 	
 	return (
@@ -23,8 +24,8 @@ function App() {
 				<AppFilter/>
 			</div>
 			
-			<EmployeesList data={data}/>
-			<EmployeesAddForm/>
+			<EmployersList data={data}/>
+			<EmployersAddForm/>
 		</div>
 	);
 }
